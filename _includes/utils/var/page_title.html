@@ -1,0 +1,7 @@
+{%- capture page_title -%}
+	{%- if page.title == 'Home' or page.title =="Page not found" -%}
+		{{ site.title }}
+	{%- else -%}
+		{{ page.title | strip_html }} | {{ site.title }}
+	{%- endif -%}
+{%- endcapture -%}

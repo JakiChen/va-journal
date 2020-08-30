@@ -1,0 +1,7 @@
+{%- capture page_pubdate -%}
+{%- if page.date -%}
+{{page.date}}
+{%- else -%}
+{{ site.time | date_to_xmlschema }}
+{%- endif -%}
+{%- endcapture -%}

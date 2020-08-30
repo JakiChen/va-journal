@@ -1,0 +1,29 @@
+<header class="{{ page.data_section }}">
+	<div class="secondary">
+		{%- assign handle = page.title -%}
+		{%- case handle -%}
+			{% when 'Home' %}
+				<h2>The Best Design Projects From All Over The World.<br> c.2019—>c.{{ 'now' | date: '%Y' }}</h2>
+			{% when 'About' or 'Collections' or 'Products' or 'Page not found' %}
+				<h1><a href="/">Back to Journal</a></h1>
+			{% when 'paperback pioneers' %}
+				<h1><a href="/products">Back to Products</a></h1>
+			{% when 'Archives' or 'Articles' or 'Biographies'%}
+				<nav class="filter-nav"></nav>
+		{%- endcase -%}
+	</div>
+</header>
+
+<div class="logo">
+	<h1>
+		<a href="/">
+			{%- if page.title == 'Home' -%}
+				VA:Journal
+				{% elsif page.title =='paperback pioneers' %}
+				{{ page.product_title | capitalize_all }}
+				{% else %}
+				{{ page.title | capitalize_all }}
+			{%- endif -%}
+		</a>
+	</h1>
+</div>

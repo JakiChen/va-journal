@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<main data-template="archive-item">
+	<a href="{{ site.url | append: '/archives' }}" class="archive-close">&times;</a>
+	<div class="archive-current">
+		{% assign acrhive_source = page.slug | append: '/' | prepend: '/thumbs/archives/' %}
+		{% assign cdn = site.blog.cdn_url | append: acrhive_source %}
+		<div class="archive-current-images">
+			{% for image in page.images %}
+			<div class="archive-current-image-wrap" id="image-1">
+				<div class="archive-current-image" data-loaded="false"
+					style="background-image: url('{{ image | prepend: cdn }}');">
+				</div>
+			</div>
+			{%- capture total_img -%}
+				{{ total_img | plus: 1 }}
+			{%- endcapture -%}
+			{% endfor %}
+		</div>
+
+		<div class="archive-current-text">
+			<div class="archive-current-text-col">{{ page.title | capitalize_all }}</div>
+			<div class="archive-current-text-col">
+				{% for credit in page.credits %}
+					{{ credit.title | capitalize_all }}:&nbsp;{{ credit.info | capitalize_all }}<br>
+				{% endfor %}
+				&mdash;<br>
+				{{ content }}
+			</div>
+		</div>
+
+		<div class="archive-current-text-nav">
+			<div class="archive-current-num">{{ page.archive_number }}</div>
+			<div><a href="#" class="archive-text-toggle">i</a></div>
+			<div class="archive-current-image-counter">{{ total_img | prepend: '1/' }}</div>
+		</div>
+
+	</div>
+</main>

@@ -1,0 +1,60 @@
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json" class="yoast-schema-graph">
+{
+    "@context": "https://schema.org",
+    "@graph": [{
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "sameAs": [{{ site.social.links | join:',' }}],
+        "logo": {
+            "@type": "ImageObject",
+            "@id": "{{ site.url }}/#logo",
+            "inLanguage": "{{ site.blog.lang }}",
+            "url": "{{ site.url }}/wp-content/assets/images/social/mucho_design_logo.png",
+            "width": 228,
+            "height": 221,
+            "caption": "{{ site.title }}"
+        },
+        "image": {
+            "@id": "{{ site.url }}/#logo"
+        }
+    }, {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}/",
+        "name": "Moon Safari",
+        "description": "{{ site.description }}",
+        "publisher": {
+            "@id": "{{ site.url }}/#organization"
+        },
+        "potentialAction": [{
+            "@type": "SearchAction",
+            "target": "{{ site.url }}/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }],
+        "inLanguage": "{{ site.blog.lang }}"
+    }, {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}/#webpage",
+        "url": "{{ site.url }}/",
+        "name": "{{ page_title }}",
+        "isPartOf": {
+            "@id": "{{ site.url }}/#website"
+        },
+        "about": {
+            "@id": "{{ site.url }}/#organization"
+        },
+        "datePublished": "{{ page_pubdate }}",
+        "dateModified": "{{ page_modifidate }}",
+        "description": "{{ page_description }}",
+        "inLanguage": "{{ site.blog.lang }}",
+        "potentialAction": [{
+            "@type": "ReadAction",
+            "target": ["{{ site.url }}/"]
+        }]
+    }]
+}
+</script>

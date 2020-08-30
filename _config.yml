@@ -1,0 +1,92 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+#
+# Jekyll - Offical settings
+#
+#---------------------------------------------------------------
+# - Warning: ⚠️ Do not use "tabs" in configuration files
+# - This will either lead to parsing errors, or Jekyll will revert to the default settings.
+# - Use spaces instead.
+#---------------------------------------------------------------
+title                       : VA:Journal
+description                 : >
+ VA:Journal is my blog, featuring through a personal and accurate research the best branding and graphic design projects from all over the world.
+keywords                    : ['Digital agency', ' UX agency', 'Ui design', 'UX design agency','UI design agency', 'Product design agency', 'Web design firm', 'App design company', 'Product design company']
+
+author: 
+    name                    : VA:Journal
+    email                   : info@vaj.today
+
+
+baseurl                     : "" # the subpath of your site, e.g. /blog
+url                         : "" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Blog
+blog:
+      google_analytics      : 'UA-162031185-2'
+      description           : 'Plus eXperience for your Brand. Brand Experience Marketing &amp; Design Partner'
+      keywords              : ''
+      lang                  : en
+      locale                : en_GB
+      last_modified_at      : 2020-06-15 12:58:30
+      domain                : vaj.today
+      cdn_url               : 'http://localhost:4000'
+      
+# Collections
+collections:
+    products:
+        products            : true
+        output              : true
+    collections:
+        collections         : true
+        output              : true
+        
+collections_dir             : src
+
+# Plugin
+plugins:
+  - jekyll-sitemap
+  
+social:
+  name                      : Mucho Design
+  links:
+    - '"https://behance.net/muchodzn"'
+    - '"https://www.linkedin.com/in/muchodzn"'
+    - '"https://github.com/muchodzn"'
+    - '"https://behance.net/muchodzn"'
+    
+webmaster_verifications:
+    google                  : google
+    bing                    : bing
+    alexa                   : alexa
+    yandex                  : yandex
+    baidu                   : baidu
+
+# Cmopress html 
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+#

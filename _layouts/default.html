@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include main/head.html %}
+</head>
+<body 
+	data-section="{{ page.data_section }}" 
+	{% if page.data_section == 'archive' %}class="lightbox-open"{% endif %}>
+	{% include utils/style.html %}
+	{% include moudle/menu.html %}
+	{% include moudle/arrow_up.html %}
+	{% include moudle/cart_pane.html %}
+	<div class="container">
+		{% include page/header.html %}
+		{{ content }}
+	</div>
+	{% include moudle/lightbox.html %}
+	{% include page/footer.html %}
+	{% include utils/script.html %}
+</body>
+</html>

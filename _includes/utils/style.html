@@ -1,0 +1,54 @@
+<style>
+	@font-face {
+		font-family: 'Recollection Display Cond Bold';
+		src: url('/assets/fonts/ReDisp-Cond-Bold-Web.woff');
+	}
+
+	.takeover {
+		font-family: 'Recollection Display Cond Bold';
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(232, 65, 44, 0.9);
+		z-index: 10000;
+		overflow-y: scroll;
+	}
+
+	.takeover svg {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 100001;
+		margin: 2.4rem;
+		cursor: pointer;
+	}
+
+	.takeover p {
+		text-indent: 1.5em;
+		font-size: 6.5vw;
+		line-height: 1;
+	}
+
+	@media (max-width: 560px) {
+		.takeover p {
+			font-size: 3.2rem;
+		}
+
+		.takeover svg {
+			width: 3rem;
+			margin: 1.2rem 1.6rem;
+		}
+	}
+
+	.takeover__inner {
+		padding: 0.8rem 2.4rem 2.4rem;
+	}
+
+	.takeover img {
+		display: inline-block;
+		height: 0.72em;
+		width: auto;
+	}
+</style>

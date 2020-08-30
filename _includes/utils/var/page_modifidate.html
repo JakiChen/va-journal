@@ -1,0 +1,11 @@
+{%- capture page_modifidate -%}
+	{%- if page.last_modified_at -%}
+		{{ page.last_modified_at | date: date_format }}
+	{%- else -%}
+		{%- if page.date -%}
+			{{ page.date }}
+		{%- else -%}
+			{{ site.time | date_to_xmlschema }}
+		{%- endif -%}
+	{%- endif -%}
+{%- endcapture -%}
