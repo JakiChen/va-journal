@@ -2,6 +2,6 @@
 	{%- if page.title == 'Home' or page.title =="Page not found" -%}
 		{{ site.title }}
 	{%- else -%}
-		{{ page.title | strip_html }} | {{ site.title }}
+		{{ page.title | strip_html | capitalize_all }} | {{ site.title }}
 	{%- endif -%}
 {%- endcapture -%}

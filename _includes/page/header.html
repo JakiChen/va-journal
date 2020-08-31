@@ -1,16 +1,24 @@
 <header class="{{ page.data_section }}">
 	<div class="secondary">
+
 		{%- assign handle = page.title -%}
 		{%- case handle -%}
 			{% when 'Home' %}
 				<h2>The Best Design Projects From All Over The World.<br> c.2019—>c.{{ 'now' | date: '%Y' }}</h2>
 			{% when 'About' or 'Collections' or 'Products' or 'Page not found' %}
 				<h1><a href="/">Back to Journal</a></h1>
-			{% when 'paperback pioneers' %}
-				<h1><a href="/products">Back to Products</a></h1>
 			{% when 'Archives' or 'Articles' or 'Biographies'%}
 				<nav class="filter-nav"></nav>
 		{%- endcase -%}
+
+		{%- assign handleOut = page.layout -%}
+		{%- case handleOut -%}
+			{% when 'article' %}
+				<h1><a href="{{ '/articles' | prepend: site.url }}">Articles</a> –> {{ page.title | capitalize_all }}</h1>
+			{% when 'product' %}
+				<h1><a href="{{ '/products' | prepend: site.url }}">Products</a> –> {{ page.title | capitalize_all }}</a></h1>
+		{%- endcase -%}
+		
 	</div>
 </header>
 

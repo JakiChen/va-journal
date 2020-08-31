@@ -92,7 +92,6 @@ ul {
 ::-moz-selection {
     background: #e8412c;
     -moz-opacity: 0.85;
-    opacity: 0.85;
 }
 
 body {
@@ -1388,10 +1387,7 @@ p {
     line-height: 1.2;
     text-indent: 7.5rem;
 }
-.archive-current-text-col p{
-    text-indent: 0;
-    padding-bottom: 16px;
-}
+
 p+.left+p {
     text-indent: 7.5rem;
 }
@@ -1850,7 +1846,7 @@ nav .trigger:hover {
 }
 
 nav li {
-    /* float: left; */
+    float: left;
     display: inline;
     padding-right: 2em;
     padding-bottom: 0.15em;

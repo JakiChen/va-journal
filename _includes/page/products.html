@@ -1,18 +1,21 @@
 <main data-template="products" role="main">
+	{% assign pr_source = page.slug | append: '/' | prepend: '/thumbs/products' %}
+	{% assign cdn_pr = site.blog.cdn_url | append: pr_source %}
+	{% for product in site.products %}
 	<article class="">
-		<a href="/products/paperback-pioneers">
+		<a href="{{ product.url }}">
 
 			<section class="image">
 				<figure>
-					<img src="/content/6-products/1-paperback-pioneers/01_sunbooks.jpg">
+					<img src="{{ product.images[0].img | prepend: cdn_pr }}">
 				</figure>
 			</section>
 			<ul>
 				<li>Product</li>
-				<li>Paperback Pioneers:</li>
-				<li>Sun Books (1965–81)</li>
-				<li class="item-number">$40</li>
+				<li>{{ product.product_title }}</li>
+				<li class="item-number">${{ product.price.usd }}</li>
 			</ul>
 		</a>
 	</article>
+	{% endfor %}
 </main>

@@ -1,12 +1,15 @@
-<script>
-	$(document).ready(function () {
+<script type="text/javascript">
+	// $(document).ready(function () {
+
+	// })
+	$(function () {
 		$('.takeover svg').on('click', function (event) {
 			event.preventDefault()
 			$('.takeover').fadeOut()
-		})
+		});
 		$('.arrow-up ').on('click', function (event) {
 			event.preventDefault()
-			$('html').animate({ scrollTop: 0 }, 'slow'); return true; 
-		})
-	})
+			$('html').animate({ scrollTop: 0 }, 'slow'); return true;
+		});
+	});
 </script>

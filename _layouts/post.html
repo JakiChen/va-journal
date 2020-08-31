@@ -4,7 +4,7 @@ layout: default
 <main data-template="archive-item">
 	<a href="{{ site.url | append: '/archives' }}" class="archive-close">&times;</a>
 	<div class="archive-current">
-		{% assign acrhive_source = page.slug | append: '/' | prepend: '/thumbs/archives/' %}
+		{% assign acrhive_source = page.slug | append: '/' | prepend: '/thumbs/archives' %}
 		{% assign cdn = site.blog.cdn_url | append: acrhive_source %}
 		<div class="archive-current-images">
 			{% for image in page.images %}

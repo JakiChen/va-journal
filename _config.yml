@@ -33,6 +33,7 @@ keywords                    : ['Digital agency', ' UX agency', 'Ui design', 'UX 
 author: 
     name                    : VA:Journal
     email                   : info@vaj.today
+    github                  : va-journal
 
 
 baseurl                     : "" # the subpath of your site, e.g. /blog
@@ -54,6 +55,9 @@ blog:
 collections:
     products:
         products            : true
+        output              : true
+    articles:
+        articles            : true
         output              : true
     collections:
         collections         : true
